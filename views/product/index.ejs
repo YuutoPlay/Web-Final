@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<!-- Add a product heading section -->
+<div class="container">
+  <h1 class="text-center mb-4">Product List</h1>
+
+  <!-- Grid System for Product Display -->
+  <div class="row">
+    <% products.forEach(product => { %>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="card shadow-sm border-light rounded">
+          <img src="<%= product.image %>" class="card-img-top" alt="<%= product.name %>">
+          <div class="card-body">
+            <h5 class="card-title text-center"><%= product.name %></h5>
+            <p class="card-text text-center"><%= product.description %></p>
+            <div class="text-center">
+              <a href="/product/<%= product.id %>" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>
