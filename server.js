@@ -5,6 +5,11 @@ const path = require('path');
 const session = require('express-session');
 const flash = require('connect-flash');
 
+
+// // Serve static files from the "public" folder
+// app.use(express.static('public'));
+
+
 const productRoutes = require('./routes/productRoutes');
 const indexRoutes = require('./routes/indexRoutes');
 // Middleware
