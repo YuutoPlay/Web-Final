@@ -11,7 +11,7 @@
 <% } %>
 
 <h1 class="mb-4">Login</h1>
-<form action="/auth/login" method="post" class="card p-4">
+<form action="/user/login" method="post" class="card p-4">
   <div class="mb-3">
     <label for="email" class="form-label">Email</label>
     <input type="email" class="form-control" name="email" id="email" required>
@@ -21,7 +21,7 @@
     <input type="password" class="form-control" name="password" id="password" required>
   </div>
   <button type="submit" class="btn btn-primary">Login</button>
-  <a href="/register" class="btn btn-secondary mt-3">Don't have an account? Register</a>
+  <a href="/user/register" class="btn btn-secondary mt-3">Don't have an account? Register</a>
 </form>
 
 <%- include('../partials/footer') %>

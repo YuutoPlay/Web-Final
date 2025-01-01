@@ -49,3 +49,9 @@ app.use('/',indexRoutes)
 app.listen(PORT,()=>{
     console.log("server is running on port "+PORT);
 });
+
+
+// login section 
+const userRoutes = require('./routes/userRoutes'); // Add this line
+app.use('/user', userRoutes); // Add this line
+
