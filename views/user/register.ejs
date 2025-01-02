@@ -1,50 +1,47 @@
 <%- include('../partials/header') %>
 
-    <div class="container mt-5 p-5">
-        <h1 class="mb-4">Register</h1>
+<div class="container mt-5 d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="register-container">
+        <h1 class="mb-4 text-center">Register</h1>
 
         <!-- Display flash messages -->
         <% if (messages.error) { %>
             <div class="alert alert-danger">
-                <% messages.error.forEach(error=> { %>
-                    <p>
-                        <%= error %>
-                    </p>
-                    <% }); %>
+                <% messages.error.forEach(error => { %>
+                    <p><%= error %></p>
+                <% }); %>
             </div>
-            <% } %>
+        <% } %>
 
-                <% if (messages.success) { %>
-                    <div class="alert alert-success">
-                        <% messages.success.forEach(success=> { %>
-                            <p>
-                                <%= success %>
-                            </p>
-                            <% }); %>
-                    </div>
-                    <% } %>
+        <% if (messages.success) { %>
+            <div class="alert alert-success">
+                <% messages.success.forEach(success => { %>
+                    <p><%= success %></p>
+                <% }); %>
+            </div>
+        <% } %>
 
-                        <form action="/user/register" method="post" class="card p-4">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" name="name" id="name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" name="email" id="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" name="password" id="password" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="confirmPassword" class="form-label">Confirm Password</label>
-                                <input type="password" class="form-control" name="confirmPassword" id="confirmPassword"
-                                    required>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Register</button>
-                            <a href="/user/login" class="btn btn-secondary mt-3">Already have an account? Login</a>
-                        </form>
+        <form action="/user/register" method="post" class="card p-4">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Register</button>
+            <a href="/user/login" class="btn btn-secondary w-100 mt-3">Already have an account? Login</a>
+        </form>
     </div>
+</div>
 
     <%- include('../partials/footer') %>
