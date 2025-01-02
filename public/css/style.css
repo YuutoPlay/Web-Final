@@ -1,79 +1,169 @@
-/* General body and container styling */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+/* Reset margins and paddings for all elements */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+/* Ensure no default margins or padding on body and html */
+body, html {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Ensure full width */
+    height: 100%; /* Ensure full height */
+    overflow-x: hidden; /* Prevent horizontal scrolling caused by overflow */
+}
+
+html, body, .hero-section {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 30px;
 }
 
-h1 {
-    font-size: 2.5rem;
+/* Add margin to the products section */
+#products {
+    margin-top: 50px; /* Space between the hero section and products */
+    padding-top: 20px; /* Optional padding for additional clarity */
+}
+
+/* Brand Name */
+.navbar-brand {
+    font-size: 6.5rem;
+    font-weight: bold;
+    color: white !important;
+    text-transform: capitalize; /* Match the second image's case */
+}
+
+.navbar-brand:hover {
+    color: #ddd !important;
+    text-decoration: none;
+}
+
+/* Updated Navigation Bar Styling */
+header.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000 !important;
+    color: white;
+    padding: 10px 0; /* Maintain padding for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation */
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+}
+
+/* Updated Navigation Links */
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: normal;
+    padding: 0 15px;
+    text-transform: capitalize; /* Match the second image's case */
+    transition: color 0.3s ease-in-out;
+    font-size: 1.2rem; /* Increase font size */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff4500 !important; /* Optional subtle hover effect */
+    text-decoration: none;
+}
+
+
+/* Navbar Toggler */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: url('../image/pexels-mnzoutfits-1598505.jpg') no-repeat ;
+    height: 100vh !important; /* Full viewport height */
+    width: 100vw !important; /* Full viewport width */
+    color: white;
+    text-align: center;
+    display: flex;
+    background-size: cover; /* Ensures the image scales to cover the entire section */
+    background-position: center;  /* Centers the image */
+    /* background-repeat: no-repeat; Prevents tiling/repeating of the image */
+    margin: 0; /* Remove any extra margins */
+    padding: 0; /* Remove any extra padding */
+}
+
+
+
+
+/* Overlay for better text readability */
+.hero-section .overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* Flash message styling */
-.alert {
-    margin-top: 20px;
+.hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
 }
 
-/* Card styling */
-.card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
+.hero-section .btn-group {
+    display: flex;
+    gap: 20px;
 }
 
-.card img {
-    max-height: 200px;
-    object-fit: cover;
+.hero-section .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
-/* Table styling */
-.table {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.table th, .table td {
-    padding: 15px;
-    text-align: center;
-}
-
-.table th {
-    background-color: #007bff;
+.hero-section .btn-outline-light {
     color: white;
+    background: transparent;
+    border: 2px solid white;
 }
 
-.table tbody tr:hover {
-    background-color: #f1f1f1;
+.hero-section .btn-outline-light:hover {
+    background: white;
+    color: black;
 }
 
-/* Buttons */
-.btn {
-    border-radius: 20px;
+.hero-section .btn-light {
+    background: white;
+    color: black;
+    border: 2px solid transparent;
 }
 
-.btn-primary {
-    background-color: #007bff;
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-/* Additional styling for the footer */
-footer {
-    background-color: #343a40;
+.hero-section .btn-light:hover {
+    background: black;
     color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    border: 2px solid white;
 }
+
+
+

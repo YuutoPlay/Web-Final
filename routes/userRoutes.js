@@ -82,7 +82,7 @@ router.post('/register', async (req, res) => {
         await pool.execute('INSERT INTO users (username, email, password) VALUES (?, ?, ?)', [name, email, hashedPassword]);
 
         req.flash('success', 'Registration successful. Please login.');
-        res.redirect('/user/login');
+        res.redirect('/user/login'); 
     } catch (err) {
         console.error(err);
         req.flash('error', 'An error occurred.');
