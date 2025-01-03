@@ -1,41 +1,180 @@
 <%- include('../partials/header') %>
 
 <!-- Hero Section -->
-<div class="hero-section">
-  <div class="overlay">
-    <h1 class="display-3">GET STARTED WITH KOOL KICKS</h1>
-    <p class="lead">Step into style and comfort with our curated collection of sneakers. Designed for every occasion, from casual outings to active adventures, these versatile kicks combine trend and function seamlessly. Elevate your footwear game today!</p>
-    <div class="btn-group">
-      <a href="#learn-more" class="btn btn-outline-light">Learn More</a>
-      <a href="#subscribe" class="btn btn-light">Subscribe</a>
-    </div>
+<section class="home" id="home">
+  <div class="home-text">
+    <h1>
+      Start your day <br />
+      with Milk Tea
+    </h1>
+    <p>
+      Happiness is to share special moments with friends. A celebration, a date
+      or just a relaxing break in the day, there is always a reason to get
+      together around a cup of KOI tea. KOI brings joy to the world. Freshly
+      brewed tea and flavorful ingredients, prepared with passion are the key to
+      KOI’s authentic taste and the reason why people come back again and again.
+    </p>
+    <a href="#" class="btn">Buy Now</a>
   </div>
-</div>
-
+  <div class="home-img">
+    <img src="image/main.png" alt />
+  </div>
+</section>
+<section class="about" id="about">
+  <div class="about-img">
+    <img src="image/about.jpg" alt />
+  </div>
+  <div class="about-text">
+    <h2>Our History</h2>
+    <p>
+      KOI Thé is a popular bubble tea brand that originated in Taiwan as part of
+      the 50 Lan chain before rebranding to expand internationally. Known for
+      its premium quality teas and unique golden tapioca pearls, KOI Thé offers
+      a refined tea experience with a focus on fresh ingredients and
+      customizable sweetness and ice levels. The brand has grown globally, with
+      locations across Asia, the U.S., and other regions. Its signature drinks,
+      such as Golden Bubble Milk Tea, Oolong Milk Tea, and Green Tea Macchiato,
+      have helped establish KOI Thé as a go-to destination for bubble tea
+      lovers, providing a consistent and high-quality beverage experience
+      worldwide.
+    </p>
+    <a href="#" class="btn">Learn more</a>
+  </div>
+</section>
 
 <!-- Products Section -->
 <div class="container" id="products">
   <div class="row">
     <% products.forEach(product => { %>
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-        <div class="card shadow-lg border-light rounded">
-          <img src="<%= product.image %>" class="card-img-top" alt="<%= product.name %>">
-          <div class="card-body">
-            <h5 class="card-title text-center"><%= product.name %></h5>
-            <p class="card-text text-center"><%= product.description %></p>
-            <a href="/product/<%= product.id %>" class="btn btn-primary w-100">View Details</a>
-          </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card shadow-lg border-light rounded">
+        <img
+          src="<%= product.image %>"
+          class="card-img-top"
+          alt="<%= product.name %>"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center"><%= product.name %></h5>
+          <p class="card-text text-center"><%= product.description %></p>
+          <a href="/product/<%= product.id %>" class="btn btn-primary w-100"
+            >View Details</a
+          >
         </div>
       </div>
+    </div>
     <% }); %>
   </div>
 </div>
+<!--Customers-->
+<section class="customers" id="customers">
+  <div class="heading">
+    <h2>Our customer's</h2>
+  </div>
+  <!--container-->
+  <div class="customers-container">
+    <div class="box">
+      <div class="stars">
+        <i class="bx bxs-star"></i>
+        <i class="bx bxs-star"></i>
+        <i class="bx bxs-star"></i>
+        <i class="bx bxs-star"></i>
+        <i class="bx bxs-star-half"></i>
+      </div>
+      <p>
+        "KOI Thé has completely changed my bubble tea game! I love how they
+        offer a wide range of customizable options for sweetness and ice levels,
+        allowing me to adjust my drink just the way I like it. Their Golden
+        Bubble Milk Tea is by far my favorite — the tapioca pearls are so soft
+        and sweet, and the tea is always fresh. The quality and consistency of
+        every cup I get are unmatched, and I appreciate how they maintain high
+        standards no matter which location I visit. Definitely my go-to bubble
+        tea spot!"
+      </p>
+      <h2>G-Devith</h2>
+      <img src="image/gd.jpg" alt />
+    </div>
+    <div class="box">
+      <div class="stars">
+        <i class="bx bxs-star"></i>
+        <i class="bx bxs-star"></i>
+        <i class="bx bxs-star"></i>
+        <i class="bx bxs-star"></i>
+        <i class="bx bxs-star-half"></i>
+      </div>
+      <p>
+        "I’ve tried many bubble tea places, but KOI Thé stands out as the best
+        by far. The flavors are vibrant and refreshing, and I’m always impressed
+        by the quality of the ingredients they use. The Green Tea Macchiato is
+        my absolute favorite — it’s the perfect balance of tea and creamy
+        goodness. Plus, their golden bubbles are a game changer! Soft, chewy,
+        and perfectly sweet. Every visit is consistent, and I can always count
+        on a satisfying drink. I highly recommend KOI Thé to anyone who’s a fan
+        of high-quality bubble tea!"
+      </p>
+      <h2>Vannda</h2>
+      <img src="image/vd.jpg" alt />
+    </div>
+    <div class="box">
+      <div class="stars">
+        <i class="bx bxs-star"></i>
+        <i class="bx bxs-star"></i>
+        <i class="bx bxs-star"></i>
+        <i class="bx bxs-star"></i>
+        <i class="bx bxs-star-half"></i>
+      </div>
+      <p>
+        "KOI Thé is hands down one of the best bubble tea chains I’ve found.
+        From the first sip, you can tell they prioritize quality. I love their
+        wide range of drinks, but the signature Golden Bubble Milk Tea has to be
+        my favorite — the pearls are perfectly chewy, and the milk tea is rich
+        without being too sweet. The customization options let me adjust my
+        drink just the way I like it, which is a huge plus. I also love how
+        clean and modern the locations are. The service is quick, and the staff
+        is always so welcoming. I’ll definitely be returning!"
+      </p>
+      <h2>Zhao Lusi</h2>
+      <img src="image/lusi.jpg" alt />
+    </div>
+  </div>
+</section>
+  <section class="footer">
+    <div class="footer-box">
+        <h2>KOI The</h2>
+        <p>"KOI Thé isn’t just a drink, it’s an experience — where every sip is crafted with quality, every bubble is perfectly sweet, and every visit feels like a treat."</p>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-tiktok'></i></a>
+        </div>
+    </div>
+    <div class="footer-box">
+        <h3>Support</h2>
+        <li><a href="#">Drinks</a></li>
+        <li><a href="#">Help & Support</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+    </div>
+    <div class="footer-box">
+        <h3>View Guild</h2>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog Posts</a></li>
+        <li><a href="#">Our Branches</a></li>
+    </div>
+    <div class="footer-box">
+        <h3>Contact</h3>
+        <div class="contact">
+            <span><i class='bx bxs-map'></i>Russey Keo, Phnom Penh,
+                Cambodia</span>
+            <span><i class='bx bxs-phone'></i>+855 23 758 412</span>
+            <span><i
+                    class='bx bxs-envelope'></i>koithecambodia@gmail.com</span>
+        </div>
+    </div>
+</section>
+<!--copyright-->
+<div class="copyright">
+    <p>&#169; All right Reserved</p>
 
-
-<!-- Footer Section -->
-<footer class="bg-dark text-white text-center py-4">
-  <p>&copy; 2024 Product Showcase. All rights reserved.</p>
-  <p><a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a></p>
-</footer>
-
-<%- include('../partials/footer') %>
+</div>

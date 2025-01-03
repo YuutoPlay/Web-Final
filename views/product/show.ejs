@@ -2,6 +2,8 @@
   <div class="container mt-5 p-5">
     <h1 class="mb-4">Product Details</h1>
     <div class="card p-4">
+      <img src="<%=product.image %>" alt="<%= product.name %>" class="img-thumbnail" width="300">
+
       <p><strong>ID:</strong>
         <%= product.id %>
       </p>
@@ -10,9 +12,9 @@
       </p>
       <p><strong>Price:</strong> $<%= product.price %>
       </p>
-      <p><strong>Description:</strong> $<%= product.description %>
+      <p><strong>Description:</strong> <%= product.description %>
+        
       </p>
-    </div>
     <a href="/product" class="btn btn-secondary mt-3">Back to List</a>
   </div>
   <%- include('../partials/footer') %>
